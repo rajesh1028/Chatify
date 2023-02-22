@@ -1,0 +1,35 @@
+body{
+    background-color: #111b21;
+}
+#login{
+    width: 100%;
+display: flex;  
+justify-content: center;  
+}
+#login div{
+    padding: 2%;
+    margin-top:5%;
+    width: 20%;
+    background-color: white;
+    min-height: 60vh
+}
+#login input{
+    padding: 2% 0%;
+    margin: 4% 0%;
+    font-size: 20px;
+    width: 100%;
+    border: 1px solid rgb(205, 205, 209);
+}
+#login input:nth-last-child(1),button{
+    background-color: #00a884;
+    border: 0px;
+    padding: 4%;
+    color: white;
+    font-size:x-large;
+}
+button{
+    width: 100%;
+}
+a{
+    color: #00a884;
+}
