@@ -81,17 +81,6 @@
                                 </div>
 
                             </div>
-                           <!-- status open -->
-                        <div class="add_status hide">
-                            <div class="addStatus_header">
-                                <div class="messageInput">
-                                   <input type="text" id="status_input" style="padding: 3px;background-color: red; height: 400px;" value="add data">
-                                </div>
-                                <div><ion-icon name="close"></ion-icon></div>
-                            </div>
-                        </div>
-                        <!-- status close here -->
-
                             <label>Recent Updates</label>
                             <div id="recent_updates">
                                 <div class="block unseen">
@@ -146,6 +135,27 @@
                             </div>
                         </div>
                         <!-- status close here -->
+
+                        <!-- status open -->
+                        <div class="add_status hide">
+                            <div class="status_header">
+                                <div class="imgcontent">
+
+                                    <div class="imgBx">
+                                        <img src="./images/nature.jpeg">
+                                    </div>
+                                    <h3>Alex Smith</h3>
+
+                                </div>
+                                <div class="views">
+
+                                </div>
+
+                                <div><ion-icon name="close"></ion-icon></div>
+                            </div>
+                        </div>
+                        <!-- status close here -->
+
                     </div>
                 </div>
                 <div class="box calls">
@@ -155,7 +165,7 @@
                                 <div class="imgbx green">
                                     <ion-icon name="link"></ion-icon>
                                 </div>
-                                <div class="details">
+                                <div class="details" id="create_call">
                                     <div class="listHead">
                                         <h4>Create Call Link</h4>
                                     </div>
@@ -171,7 +181,7 @@
                                 </div>
                                 <div class="details">
                                     <div class="listHead">
-                                        <h4>Parichaya Simha</h4>
+                                        <h4>Pappu</h4>
                                     </div>
                                     <div class="message_p incoming">
                                         <p><ion-icon name="arrow-down"></ion-icon> 15/02/2023, 8:45 pm</p>
@@ -196,6 +206,28 @@
                         </div>
                     </div>
                 </div>
+                <!-- calling started -->
+                <div class="container_calling hide">
+                    <!-- <div id="calling_box"> -->
+                    <div id="calling_top">
+                        <h2>Username</h2>
+                        <p>Ringing</p>
+                    </div>
+                    <div id="calling_mid">
+                        <img src="https://t4.ftcdn.net/jpg/00/65/77/27/240_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"
+                            alt="user">
+                        <div class="call_end">
+                            <ion-icon id="call_end" name="call"></ion-icon>
+                        </div>
+                    </div>
+                    <div id="calling_bottom">
+                        <ion-icon name="volume-high"></ion-icon>
+                        <ion-icon name="videocam"></ion-icon>
+                        <ion-icon name="mic-off"></ion-icon>
+                    </div>
+                    <!-- </div> -->
+                </div>
+                <!-- calling ended -->
             </div>
         </div>
         <div class="chatBox">
