@@ -89,6 +89,22 @@ let add_status = document.querySelector(".add_status");
 // let status_area = document.querySelector("#status_area");
 
 create_status.addEventListener("click",()=>{
-    create_status.classList.add("hide");
+    status_area.classList.add("hide");
     add_status.classList.remove("hide");
+})
+
+// calling page
+
+let calling_page = document.querySelector(".box.calls");
+let calling_button = document.getElementById("create_call");
+let calling_display = document.querySelector(".container_calling");
+
+calling_button.addEventListener("click",()=>{
+    calling_page.classList.add("hide");
+    calling_display.classList.remove("hide");
+})
+
+document.getElementById("call_end").addEventListener("click",()=>{
+    calling_page.classList.remove("hide");
+    calling_display.classList.add("hide");
 })

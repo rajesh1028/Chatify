@@ -595,3 +595,59 @@ ion-icon {
     display: flex;
     gap: 10px;
 } */
+
+
+/* calling feature */
+
+.container_calling {
+    position: relative;
+    width: 340px;
+    height: 510px;
+    background: #fff;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    /* display */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container_calling.hide {
+    display: none;
+}
+
+#calling_top,
+#calling_bottom {
+    width: 340px;
+    background: #008069;
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+}
+
+#calling_top p {
+    margin-top: 5px;
+}
+
+#call_end {
+    rotate: 136deg;
+    background-color: red;
+    padding: 15px;
+    color: white;
+    border-radius: 50%;
+}
+
+.call_end {
+    width: 20%;
+    margin: auto;
+}
+
+#calling_bottom {
+    display: flex;
+    justify-content: space-around;
+}
+
+.box.calls.hide {
+    display: none;
+}
