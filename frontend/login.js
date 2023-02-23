@@ -16,7 +16,7 @@ form.addEventListener('submit',async(e)=>{
         alert(`Login Succesful!`);
         localStorage.setItem("name",res.name);
         localStorage.setItem("token",res.token);
-        window.location="./target.html"
+        window.location="./this_needs_to_be_linked_to_the_Homepage"
     }else if(res.status=="medium"){
         alert(`Please Register First`);
         window.location="./register.html"

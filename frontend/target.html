@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chatify</title>
 </head>
-<body>
-    Target
+<link rel="stylesheet" href="./target.css">
+<body background="https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png">
+    <nav>
+        
+        <img src="../assets/Chatify.png" alt="">
+        <div >
+            <button onclick="document.location='http://127.0.0.1:5500/frontend/login.html'">Login</button>
+            <button onclick="document.location='http://127.0.0.1:5500/frontend/register.html'">Register</button>
+        </div>
+    </nav>
+    <div id="main">
+    <h1>Welcome to Chatify</h1>
+    </div>
 </body>
 </html>
 <script>
-    document.querySelector("body").innerText=`Name:${localStorage.getItem('name')}\nToken:${localStorage.getItem('token')}`
+    // document.querySelector("body").innerText=`Name:${localStorage.getItem('name')}\nToken:${localStorage.getItem('token')}`
 </script>
