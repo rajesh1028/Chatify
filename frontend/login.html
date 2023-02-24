@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://kit.fontawesome.com/5598f0038c.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../assets/Chatify.png" type="image/x-icon">
+</head>
+<link rel="stylesheet" href="./login.css">
+<body background="https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png">
+<div id="login">
+    <div>
+        <h1>Login</h1>
+        <form id="form">
+            <input type="text" placeholder="Enter Your Email Address" id="email" required>
+            <br>
+            <input type="password" placeholder="Enter Your Password" id="password" required>
+            <br>
+            <input type="submit" value="Continue">
+        </form>
+            <button onclick="document.location='http://127.0.0.1:3000/auth/google'">Continue with Google</button>
+        <h3>Dont't have account ? <a id="a" href="./register.html">Register</a></h3>
+    </div>
+</div>
+</body>
+
+</html>
+<script src="./login.js"></script>
