@@ -25,5 +25,12 @@
         localStorage.clear();
         document.location='http://127.0.0.1:5500/frontend/target.html'
     }
-    document.getElementById('name').innerText=localStorage.getItem('name');
+    let name=localStorage.getItem('name');
+    if(!name){
+        const urlParams = new URLSearchParams(window.location.search)
+        localStorage.setItem("name",(urlParams.get('name')))
+        localStorage.setItem("token",(urlParams.get('token')))
+    }
+    name=localStorage.getItem('name');
+    document.getElementById('name').innerText=name;
 </script>

@@ -3,10 +3,16 @@ const cors = require("cors");
 
 const { connection } = require("./config/db");
 const { userRouter } = require("./routes/userRouter");
-const { passport, Gname } = require("./google-auth");
+const { passport } = require("./google-auth");
 
 const app = express();
 app.use(cors());
+app.use(express.json())
+
+    app.get('/re', (ask, give) => {
+        let {profile}=require("./google-auth")
+        give.redirect(`http://127.0.0.1:5500/frontend/chatify.html?token=${profile.t}&name=${profile.name.givenName}&hfh=${profile.t}`);
+    })
 
 app.get('/', (ask, give) => {
     give.send('Welcome to Chatify.com Backend')
@@ -24,10 +30,7 @@ app.get('/auth/google/callback',
         res.redirect('/');
     });
 
-app.get('/re', (ask, give) => {
-    console.log(Gname)
-    give.redirect(301, `http://127.0.0.1:5500/frontend/chatify.html/`);
-})
+
 
 app.listen(process.env.port, () => {
     try {
