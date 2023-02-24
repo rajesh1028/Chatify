@@ -3,7 +3,7 @@ const cors = require("cors");
 
 const { connection } = require("./config/db");
 const { userRouter } = require("./routes/userRouter");
-const { passport } = require("./google-auth");
+const { passport, Gname } = require("./google-auth");
 
 const app = express();
 app.use(cors());
@@ -18,12 +18,16 @@ app.get('/auth/google',
     passport.authenticate('google', { scope: ['profile','email'] }));
 
 app.get('/auth/google/callback',
-    passport.authenticate('google', { failureRedirect: '/login' }),
+    passport.authenticate('google', { failureRedirect: '/re' }),
     function (req, res) {
         // Successful authentication, redirect home.
-        // res.redirect('/');
-res.send("hello")
+        res.redirect('/');
     });
+
+app.get('/re', (ask, give) => {
+    console.log(Gname)
+    give.redirect(301, `http://127.0.0.1:5500/frontend/chatify.html/`);
+})
 
 app.listen(process.env.port, () => {
     try {
