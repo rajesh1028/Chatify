@@ -13,15 +13,24 @@
         
         <img src="../assets/Chatify.png" alt="">
         <div >
-            <button onclick="document.location='http://127.0.0.1:5500/frontend/login.html'">Login</button>
-            <button onclick="document.location='http://127.0.0.1:5500/frontend/register.html'">Register</button>
+            <button id="name">Name</button>
+            <button onclick=logout()>Logout</button>
         </div>
     </nav>
-    <div id="main">
-    <h1>Welcome to Chatify</h1>
-    </div>
+    
 </body>
 </html>
 <script>
-    // document.querySelector("body").innerText=`Name:${localStorage.getItem('name')}\nToken:${localStorage.getItem('token')}`
+    function logout(){
+        localStorage.clear();
+        document.location='http://127.0.0.1:5500/frontend/target.html'
+    }
+    let name=localStorage.getItem('name');
+    if(!name){
+        const urlParams = new URLSearchParams(window.location.search)
+        localStorage.setItem("name",(urlParams.get('name')))
+        localStorage.setItem("token",(urlParams.get('token')))
+    }
+    name=localStorage.getItem('name');
+    document.getElementById('name').innerText=name;
 </script>
