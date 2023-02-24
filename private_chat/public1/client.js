@@ -1,9 +1,15 @@
 const socket = io()
-let name1;
+const urlParams = new URLSearchParams(window.location.search)
+
+const username = urlParams.get("q")
+  //console.log(username)
+let name1=username;
 let textarea = document.querySelector('#textarea')
 let messageArea = document.querySelector('.message__area')
+
 do {
-    name1 = prompt('Please enter your name: ')
+    name1;
+    // name1 = prompt('Please enter your name: ')
 } while(!name1)
 
 textarea.addEventListener('keyup', (e) => {

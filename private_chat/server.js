@@ -56,17 +56,19 @@ io.on('connection', (socket) => {
         io.to(user.room).emit("message",formateMessage(user.username,msg))
   });
 
-
   socket.on("disconnect",()=>{
-      
-      const user = userLeave(socket.id)
-
-      io.to(user.room).emit("message",formateMessage(boatName,`${user.username} has left the chat`))
+      try {
+        io.to(user.room).emit("message",formateMessage(boatName,`${user.username} has left the chat`))
 
         //  Get all room user
         io.to(user.room).emit("roomUsers", {
           room: user.room, users: getRoomUsers(user.room)
-      })
+      })  
+      } catch (error) {
+        console.log(error)
+      }
+      const user = userLeave(socket.id)
+
 
   })
 
