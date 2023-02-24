@@ -15,7 +15,7 @@ body {
 
 .container {
     position: relative;
-    width: 340px;
+    width: 1200px;
     height: 600px;
     background: #fff;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
@@ -105,7 +105,7 @@ header .action a {
 
 .content {
     position: relative;
-    width: calc(340px * 3);
+    width: calc(1200px * 3);
     display: flex;
     transition: 0.5s;
     overflow: hidden;
@@ -113,19 +113,19 @@ header .action a {
 
 .content .box {
     position: relative;
-    width: 340px;
+    width: 1200px;
 }
 
 .tabs input:nth-child(1):checked~.content {
-    left: calc(340px * 0);
+    left: calc(600px * 0);
 }
 
 .tabs input:nth-child(2):checked~.content {
-    left: calc(340px * -1);
+    left: calc(1200px * -1);
 }
 
 .tabs input:nth-child(3):checked~.content {
-    left: calc(340px * -2);
+    left: calc(1200px * -2);
 }
 
 /* status */
@@ -490,11 +490,15 @@ ion-icon {
     position: relative;
     background: #fff;
     padding: 5px 10px;
-    width: 270px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 40px;
+}
+
+#pin{
+    margin-left: 800px;
 }
 
 .messageInput .input ion-icon {
@@ -538,12 +542,12 @@ ion-icon {
 }
 
 .statusBox .status_header {
-    padding-top: 15%;
+    padding-top: 1%;
     height: 80vh;
 }
 
 .statusBox .status_header .imgcontent {
-    width: 90%;
+    width: 50%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -557,8 +561,7 @@ ion-icon {
     display: flex;
     justify-content: center;
     align-items: end;
-    gap: 10px;
-    margin-top: 40%;
+    margin-top: 25px;
 }
 
 .statusBox .status_header .views+div {
@@ -567,7 +570,6 @@ ion-icon {
     justify-content: center;
     font-size: 30px;
     font-weight: 500;
-    margin-top: 20px;
     color: #f00;
 }
 
@@ -601,7 +603,7 @@ ion-icon {
 
 .container_calling {
     position: relative;
-    width: 340px;
+    width: 1200px;
     height: 510px;
     background: #fff;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
@@ -619,7 +621,7 @@ ion-icon {
 
 #calling_top,
 #calling_bottom {
-    width: 340px;
+    width: 1200px;
     background: #008069;
     text-align: center;
     padding: 20px 0;

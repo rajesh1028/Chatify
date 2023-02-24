@@ -46,10 +46,10 @@ function closeIcon() {
 let recent_updates = document.querySelector("#recent_updates");
 
 function statusData() {
-    fetch("https://fierce-jay-coat.cyclic.app/status",{
-        method:"GET",
-        headers:{
-            "content-type":"application/json"
+    fetch("https://fierce-jay-coat.cyclic.app/status", {
+        method: "GET",
+        headers: {
+            "content-type": "application/json"
         }
     })
         .then((res) => res.json())
@@ -85,12 +85,10 @@ function renderStatus(data) {
 // add status
 
 let create_status = document.querySelector(".block.create_status");
-let add_status = document.querySelector(".add_status");
 // let status_area = document.querySelector("#status_area");
 
-create_status.addEventListener("click",()=>{
-    status_area.classList.add("hide");
-    add_status.classList.remove("hide");
+create_status.addEventListener("click", () => {
+    window.location.href = "createstatus.html";
 })
 
 // calling page
@@ -98,13 +96,21 @@ create_status.addEventListener("click",()=>{
 let calling_page = document.querySelector(".box.calls");
 let calling_button = document.getElementById("create_call");
 let calling_display = document.querySelector(".container_calling");
+let call_btn = document.querySelectorAll(".call.call_btn");
 
-calling_button.addEventListener("click",()=>{
+call_btn.forEach((elem) => {
+    elem.addEventListener("click", () => {
+        calling_page.classList.add("hide");
+        calling_display.classList.remove("hide");
+    })
+})
+
+calling_button.addEventListener("click", () => {
     calling_page.classList.add("hide");
     calling_display.classList.remove("hide");
 })
 
-document.getElementById("call_end").addEventListener("click",()=>{
+document.getElementById("call_end").addEventListener("click", () => {
     calling_page.classList.remove("hide");
     calling_display.classList.add("hide");
 })
