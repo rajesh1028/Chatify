@@ -55,7 +55,6 @@ io.on('connection', (socket) => {
         const user = getCurrentUser(socket.id)
         io.to(user.room).emit("message",formateMessage(user.username,msg))
   });
-
   socket.on("disconnect",()=>{
       try {
         io.to(user.room).emit("message",formateMessage(boatName,`${user.username} has left the chat`))

@@ -1,0 +1,54 @@
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav img{
+    height:50px;
+}
+nav{
+    padding: 0.5% 1%;
+    background-color: #00a884;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav button{
+    font-size: 25px;
+    border: 3px solid white;
+    padding: 1% 5%;
+    background-color: #4ada80;
+    color: white;
+    border-radius: 18px;
+}
+nav button:hover{
+    border: 3px solid black;
+    cursor: pointer;
+}
+nav div{
+    display: flex;
+    justify-content: space-around;
+    margin: 0.5%;
+    gap: 10px;
+}
+#button{
+    margin-left: 40%;
+    margin-top: 25px;
+    font-size: 25px;
+    border: 3px solid white;
+    padding: 1% 5%;
+    background-color: #4ada80;
+    color: white;
+    border-radius: 18px;
+}
+#button:hover{
+    cursor: pointer;
+}
+
+.contact{
+    margin:5%;
+    color: black;
+}
+
+.contact:hover{
+    cursor: pointer;
+}
