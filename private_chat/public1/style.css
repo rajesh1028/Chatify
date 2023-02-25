@@ -10,18 +10,18 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #F8F8F8;
+    /* background: #F8F8F8; */
     font-family: 'Roboto', sans-serif;
 }
 section.chat__section {
     width: 800px;
     max-width: 90%;
-    background: #fff;
+    /* background: #fff; */
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 .brand {
     padding: 20px;
-    background: #f1f1f1;
+    background: #00a884;
     display: flex;
     align-items: center;
 }

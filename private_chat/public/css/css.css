@@ -1,9 +1,9 @@
 
 
 :root {
-	--dark-color-a: #8F8BE8;
-	--dark-color-b: #dfdc2b;
-	--light-color: #ebedf5;
+	--dark-color-a: #00a884;
+	--dark-color-b: rgba(229, 226, 226, 0.349);
+	--light-color: #ebf5eb;
 	--success-color: #5cb85c;
 	--error-color: #d9534f;
 }
@@ -17,7 +17,6 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
-	background: var(--light-color);
 	margin: 20px;
 }
 

@@ -6,16 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatify</title>
 </head>
-<body>
-    <a href="public/index.html">For group chat</a>
-    <h1 id="btn">Atul</h1>
+<link rel="stylesheet" href="./target.css">
+<body background="https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png">
+    <nav>
+        <img src="./public/Chatify (1).png" alt="">
+        <div >
+            <button id="name">Name</button>
+            <button>Logout</button>
+        </div>
+    </nav>
+    <a href="public/index.html"><button id="button">For group chat </button></a> 
+    <div class="contact">
+        <h1 style="color: palevioletred;">Online</h1>
+        <h2 id="btn">Atul</h2>
+        <h2 id="btn1">Annu</h2>
+    </div>
 </body>
 </html>
 <script>
     let a=document.getElementById("btn").innerText;
-document.getElementById("btn").addEventListener("click",(e)=>{
+    document.getElementById("btn").addEventListener("click",(e)=>{
     e.preventDefault();
+    console.log(a)
     window.location.href=`http://localhost:8080?q=${a}`
+})
+let b=document.getElementById("btn1").innerText;
+    document.getElementById("btn1").addEventListener("click",(e)=>{
+    e.preventDefault();
+    //console.log(a)
+    window.location.href=`http://localhost:8080?q=${b}`
 })
 
 </script>
