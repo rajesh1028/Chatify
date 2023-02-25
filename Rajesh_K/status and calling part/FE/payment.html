@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f2eadf;
+        }
+
+        .create_status {
+            position: relative;
+            width: 500px;
+            height: 650px;
+            background: #fff;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            /* display */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .status_header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: #008069;
+            color: #fff;
+            padding: 15px 0;
+        }
+
+        #status_close {
+            font-weight: 500;
+            font-size: 25px;
+            color: orangered;
+        }
+
+        .data_area {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            margin: auto;
+        }
+
+        .data_area input {
+            padding: 8px;
+            margin: 10px 0;
+        }
+
+        #pay_now,
+        #otp {
+            width: 40%;
+            margin: auto;
+            padding: 10px;
+            background: #008069;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #amount {
+            margin-top: 10px;
+            margin-left: 8px;
+            font-size: large;
+            margin-bottom: -20px;
+        }
+
+        img {
+            width: 60%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="create_status">
+        <div class="status_header">
+            <ion-icon name="file-tray-stacked"></ion-icon>
+            <h2>Payment</h2>
+            <ion-icon id="status_close" name="close"></ion-icon>
+        </div>
+        <div class="data_area">
+            <img src="./images/qrcode.png" alt="qr_code">
+            <div id="amount">
+                <p>Enter Mobile Number</p>
+                <input type="number" id="mobile">
+                <p>Enter Amount</p>
+                <input type="number" id="input_amount">
+                <p>Enter OTP</p>
+                <input type="number" id="input_otp">
+            </div>
+        </div>
+        <button id="otp">Generate OTP</button>
+        <button id="pay_now">Pay Now</button>
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    document.querySelector("#status_close").addEventListener("click", () => {
+        window.location.href = "index.html";
+    })
+
+    // generate otp
+
+    document.querySelector("#otp").addEventListener("click", () => {
+        const val = Math.floor(1000 + Math.random() * 9000);
+        localStorage.setItem("otp", val);
+        alert(val);
+    })
+
+    // pay now
+
+    document.querySelector("#pay_now").addEventListener("click", () => {
+        let input_otp = document.querySelector("#input_otp").value;
+        let amount_input = document.querySelector("#input_amount").value;
+        let mobile = document.querySelector("#mobile").value;
+        if (!amount_input) {
+            alert("Enter amount to proceed");
+            return;
+        }
+        if (!mobile) {
+            alert("Enter mobile number to proceed");
+            return;
+        }
+        if (input_otp == localStorage.getItem("otp")) {
+            alert("Payment Successful");
+            window.location.href = "index.html";
+        } else {
+            alert("Invalid OTP");
+        }
+    })
+
+
+
+
+</script>
+
+</html>
