@@ -34,3 +34,11 @@ button{
 a{
     color: #00a884;
 }
+
+#google{
+    display: flex;
+}
+
+#google img{
+    width: 40px;
+}
