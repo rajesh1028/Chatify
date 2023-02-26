@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>status</title>
+    <link rel="shortcut icon" href="../assets/Chatify.png" type="image/x-icon">
+</head>
+<link rel="stylesheet" href="./user.css">
+<body background="https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png">
+    <div id="topmain">
+        <nav id="nav1">
+            <h2>ADMIN SITE</h2>
+        </nav>
+        <nav id="nav2">
+            
+            <div >
+                <a href="user.html"><button>USERS</button></a>
+                <a href="status.html"><button style="background-color: #59df8c;">STATUS</button></a>
+                <a href="message.html"><button>MESSAGES</button></a>
+                <a href="../frontend/login.html"><button style="background-color: rgb(248, 112, 112);" id="logout">LOGOUT</button></a>
+            </div>
+        </nav>
+        <div id="status-heading">
+            <div><h3>IMAGE</h3></div>
+            <div><h3>CAPTION</h3></div>
+            <div><h3>VIEWS</h3></div>
+            <div><h3>TOTAL - 16</h3></div>
+        </div>
+    </div>
+    
+    <div id="status-div"></div>
+    
+</body>
+</html>
+<script>
+    fetch("status.json")
+    .then((res)=>res.json())
+    .then((data)=>{
+        console.log(data)
+        bag=data;
+        displaycard(data);
+    });
+    function displaycard(data){
+        document.querySelector("#status-div").innerHTML="";
+        data.forEach(function (elem){
+       
+        let div=document.createElement("div");
+        let imageprod=document.createElement("img");
+        imageprod.setAttribute("src",elem.img);
+    
+        let caption=document.createElement("p");
+        caption.setAttribute("class","ptag")
+        caption.innerText=elem.caption;
+    
+        let views=document.createElement("p");
+        views.setAttribute("class","ptag")
+        views.innerText=elem.views;
+        
+        let btn1=document.createElement("button")
+        btn1.setAttribute("class","cart-btn")
+        btn1.innerText="DELETE";
+    
+        div.append(imageprod,caption,views,btn1);
+        document.querySelector("#status-div").append(div);
+        });
+    }
+    </script>
