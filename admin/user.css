@@ -1,0 +1,185 @@
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#topmain{
+    top:0px;
+    position:sticky;
+}
+#nav1{
+    
+
+    padding: 0.5% 1%;
+    background-color: #00a884;
+    
+    text-align: center;
+    align-items: center;
+}
+#nav1 h2{
+    color: white;
+}
+
+
+#nav2 img{
+    height:50px;
+}
+#nav2{
+    padding: 0.5% 2%;
+    background-color: #00a884;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0%;
+}
+#nav2 button{
+    margin-bottom: 7px;
+    font-size: 25px;
+    border: 3px solid white;
+    padding: 1% 5%;
+    background-color: #00a884;
+    color: white;
+    border-radius: 18px;
+}
+#nav2 button:hover{
+    border: 3px solid rgb(98, 98, 98);
+    cursor: pointer;
+}
+#nav2 div{
+    display: flex;
+    justify-content: space-around;
+    /* margin: 0.5%; */
+    margin-left: 30%;
+    gap: 150px;
+}
+
+/* ......................users css........................ */
+#right-div{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: auto;
+    width: 100%;
+    margin: auto;  
+    gap: 40px;
+    width: 50%;
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
+#right-div>div{
+    border: 1px solid black;
+    justify-content: space-between;
+    height: 100px;
+    display: flex;
+    padding-top: 5px;
+    text-align: center;
+    align-items: center;
+    padding: 0px 5px ;
+}
+#right-div>div:hover{
+    
+    border: 2px solid;
+    border-color: rgb(234, 89, 11);
+    
+}
+.ptag{
+    margin-bottom: 0px;
+    padding-top: 0px;
+}
+.cart-btn{height: 30px;
+    padding: 5px 10px;
+    border: 1px solid black;
+    background-color: white;
+}
+.cart-btn:hover{
+    color: white;
+    background-color: #00a884;
+}
+#heading{
+    padding-left: 26%;
+    display: flex;
+    gap: 120px;
+    margin-top: 0%;
+    background-color: rgb(221, 214, 205); 
+}
+#logout{
+    background-color: rgb(242, 121, 121);
+}
+
+/* ......................status css........................ */
+
+#status-div{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: auto;
+    width: 100%;
+    margin: auto;  
+    gap: 40px;
+    width: 50%;
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
+#status-div>div{
+    border: 1px solid black;
+    justify-content: space-between;
+    height: 100px;
+    display: flex;
+    padding-top: 5px;
+    text-align: center;
+    align-items: center;
+    padding: 5px 5px ;
+}
+#status-div>div:hover{
+    
+    border: 2px solid;
+    border-color: rgb(234, 89, 11);
+    
+}
+#status-div>div>img{
+    width: 70px;
+    height: 100px;
+}
+#status-heading{
+    margin-top: 0%;
+    background-color: rgb(221, 214, 205); 
+    padding-left: 27%;
+    display: flex;
+    gap: 150px;
+    
+}
+
+/* ......................message css........................ */
+
+#message-div{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: auto;
+    width: 100%;
+    margin: auto;  
+    gap: 40px;
+    width: 50%;
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
+#message-div>div{
+    border: 1px solid black;
+    justify-content: space-between;
+    height: 100px;
+    display: flex;
+    padding-top: 5px;
+    text-align: center;
+    align-items: center;
+    padding: 5px 5px ;
+}
+#message-div>div:hover{
+    
+    border: 2px solid;
+    border-color: rgb(234, 89, 11);
+    
+}
+#message-heading{
+    margin-top: 0%;
+    background-color: rgb(221, 214, 205); 
+    padding-left: 26%;
+    display: flex;
+    gap: 170px;
+    
+}

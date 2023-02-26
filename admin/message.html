@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message</title>
+    <link rel="shortcut icon" href="../assets/Chatify.png" type="image/x-icon">
+</head>
+<link rel="stylesheet" href="./user.css">
+<body background="https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png">
+    <div id="topmain">
+        <nav id="nav1">
+            <h2>ADMIN SITE</h2>
+        </nav>
+        <nav id="nav2">
+            
+            <div >
+                <a href="user.html"><button>USERS</button></a>
+                <a href="status.html"><button>STATUS</button></a>
+                <a href="message.html"><button style="background-color: #59df8c;">MESSAGES</button></a>
+                <a href="../frontend/login.html"><button style="background-color: rgb(248, 112, 112);" id="logout">LOGOUT</button></a>
+            </div>
+        </nav>
+        <div id="message-heading">
+            <div><h3>NAME</h3></div>
+            <div><h3>E-MAIL</h3></div>
+            <div><h3>MESSAGE</h3></div>
+            <div><h3>TOTAL - 45</h3></div>
+        </div>
+    </div>
+
+    
+    <div id="message-div"></div>
+
+</body>
+</html>
+<script>
+    fetch("message.json")
+    .then((res)=>res.json())
+    .then((data)=>{
+        console.log(data)
+        bag=data;
+        displaycard(data);
+    });
+    function displaycard(data){
+        document.querySelector("#message-div").innerHTML="";
+        data.forEach(function (elem){
+        
+        let div=document.createElement("div");
+        let username=document.createElement("p");
+        username.setAttribute("class","ptag")
+        username.innerText=elem.username;
+    
+        let email=document.createElement("p");
+        email.setAttribute("class","ptag")
+        email.innerText=elem.email;
+    
+        let message=document.createElement("p");
+        message.setAttribute("class","ptag")
+        message.innerText=elem.message;
+    
+        let btn1=document.createElement("button")
+        btn1.setAttribute("class","cart-btn")
+        btn1.innerText="DELETE";
+    
+        div.append(username,email,message,btn1);
+        document.querySelector("#message-div").append(div);
+        });
+    }
+    </script>
