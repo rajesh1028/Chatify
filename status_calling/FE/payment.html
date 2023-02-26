@@ -49,76 +49,41 @@
             color: orangered;
         }
 
-        
-
-        /* user */
         .data_area {
-            position: relative;
-            height: 100%;
-            overflow-y: auto;
-        }
-
-        .data_area .block {
-            position: relative;
-            display: flex;
-            align-items: center;
-            width: 100%;
-            gap: 10px;
-            padding: 15px 10px;
-            display: flex;
-            cursor: pointer;
-        }
-
-        .data_area .block:hover {
-            background: #f5f5f5;
-        }
-
-        .data_area .block .imgbx {
-            position: relative;
-            min-width: 45px;
-            height: 45px;
-            overflow: hidden;
-            border-radius: 50%;
-        }
-
-        .data_area .block .imgbx img {
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .data_area .block .details {
-            position: relative;
-            width: 100%;
-        }
-
-        .data_area .block .details .listHead {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .data_area .block .details .listHead h4 {
-            font-size: 1em;
-            font-weight: 600;
-            color: #111;
-            width: 100%;
-        }
-
-        #qrcode{
-            font-size: 40px;
-        }
-
-        .history div{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            width: 60%;
+            margin: auto;
         }
 
-        /* .history ion */
+        .data_area input {
+            padding: 8px;
+            margin: 10px 0;
+        }
+
+        #pay_now,
+        #otp {
+            width: 40%;
+            margin: auto;
+            padding: 10px;
+            background: #008069;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #amount {
+            margin-top: 10px;
+            margin-left: 8px;
+            font-size: large;
+            margin-bottom: -20px;
+        }
+
+        img {
+            width: 60%;
+        }
     </style>
 </head>
 
@@ -130,28 +95,18 @@
             <ion-icon id="status_close" name="close"></ion-icon>
         </div>
         <div class="data_area">
-            <div class="block">
-                <div class="imgbx">
-                    <img src="./images/user.png">
-                </div>
-                <div class="details">
-                    <div class="listHead">
-                        <h4>Pappu</h4>
-                    </div>
-                    <div class="mobile">
-                        <p>+91 1234567890</p>
-                    </div>
-                </div>
-                <ion-icon id="qrcode" name="qr-code-outline"></ion-icon>
-            </div>
-            <div class="history">
-                <h3>Payment History</h3>
-                <div>
-                    <ion-icon name="newspaper-outline"></ion-icon>
-                    <p>No Payment History</p>
-                </div>
+            <img src="./images/qrcode.png" alt="qr_code">
+            <div id="amount">
+                <p>Enter Mobile Number</p>
+                <input type="number" id="mobile">
+                <p>Enter Amount</p>
+                <input type="number" id="input_amount">
+                <p>Enter OTP</p>
+                <input type="number" id="input_otp">
             </div>
         </div>
+        <button id="otp">Generate OTP</button>
+        <button id="pay_now">Pay Now</button>
     </div>
 </body>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
