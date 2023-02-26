@@ -19,9 +19,11 @@
     </nav>
     <a href="public/index.html"><button id="button">For group chat </button></a>
     <div class="contact">
-        <h1 style="color: palevioletred;">Online</h1>
-        <h2 id="btn">Atul</h2>
-        <h2 id="btn1">Annu</h2>
+        <h1 style="color: palevioletred;">Contacts</h1>
+         <h2 id="btn">Arun</h2>
+        <h2 id="btn1">Albert</h2>
+        <h2 id="btn3">Joy</h2>
+        <h2 id="btn4">Suresh</h2>
     </div>
 </body>
 
@@ -39,5 +41,16 @@
         console.log(b)
         window.location.href = `http://localhost:5500?q=${b}`
     })
-
+let c = document.getElementById("btn2").innerText;
+    document.getElementById("btn2").addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log(c)
+        window.location.href = `http://localhost:5500?q=${c}`
+    })
+    let d = document.getElementById("btn3").innerText;
+    document.getElementById("btn3").addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log(d)
+        window.location.href = `http://localhost:5500?q=${d}`
+    })
 </script>
