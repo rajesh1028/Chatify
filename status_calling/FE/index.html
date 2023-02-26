@@ -54,9 +54,9 @@
                     <div class="contact">
                         <h1 style="color: palevioletred;">Contacts</h1>
                          <h2 id="btn">Arun</h2>
-        <h2 id="btn1">Albert</h2>
-        <h2 id="btn3">Joy</h2>
-        <h2 id="btn4">Suresh</h2>
+                         <h2 id="btn1">Albert</h2>
+                         <h2 id="btn3">Joy</h2>
+                         <h2 id="btn4">Suresh</h2>
                     </div>
                 </div>
                 <div class="box status">
@@ -286,14 +286,14 @@
 
         // private chat
 
-        let a = document.getElementById("btn1").innerText;
-        document.getElementById("btn1").addEventListener("click", (e) => {
+        let a = document.getElementById("btn").innerText;
+        document.getElementById("btn").addEventListener("click", (e) => {
             e.preventDefault();
             console.log(a)
             window.location.href = `http://localhost:5500?q=${a}`
         })
-        let b = document.getElementById("btn2").innerText;
-        document.getElementById("btn2").addEventListener("click", (e) => {
+        let b = document.getElementById("btn1").innerText;
+        document.getElementById("btn1").addEventListener("click", (e) => {
             e.preventDefault();
             console.log(b)
             window.location.href = `http://localhost:5500?q=${b}`
