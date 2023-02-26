@@ -4,7 +4,7 @@ form.addEventListener('submit',async(e)=>{
     e.preventDefault();
     let email=document.getElementById('email').value;
     let password=document.getElementById('password').value;
-    let res=await fetch("http://127.0.0.1:3000/user/login",{
+    let res=await fetch("https://sore-rose-clownfish-garb.cyclic.app/user/login",{
         method:"POST",
         body:JSON.stringify({email,password}),
         headers:{
@@ -16,10 +16,10 @@ form.addEventListener('submit',async(e)=>{
         alert(`Login Succesful!`);
         localStorage.setItem("name",res.name);
         localStorage.setItem("token",res.token);
-        window.location="./chatify.html"
+        window.location="../status_calling/FE/index.html"
     }else if(res.status=="medium"){
         alert(`Please Register First`);
-        window.location="./register.html"
+        window.location=".././index.html"
     }else{
         alert('Wrong Credentials!')
     }

@@ -43,24 +43,18 @@
 
             <div class="content">
                 <div class="box chats">
-                    <div class="data">
-                        <div class="chatlist">
-                            <div class="block unread open">
-                                <div class="imgbx">
-                                    <img src="./images/user.png">
-                                </div>
-                                <div class="details">
-                                    <div class="listHead">
-                                        <h4>Parichaya Simha</h4>
-                                        <p class="time">04:15</p>
-                                    </div>
-                                    <div class="message_p">
-                                        <p>Happy Birthday</p>
-                                        <b>1</b>
-                                    </div>
-                                </div>
-                            </div>
+                    <nav>
+                        <img src="../private_chat/public1/Chatify (1).png" alt="">
+                        <div>
+                            <button id="name">Name</button>
+                            <button id="logout">Logout</button>
                         </div>
+                    </nav>
+                    <a href="../private_chat/public/index.html"><button id="button">For group chat </button></a>
+                    <div class="contact">
+                        <h1 style="color: palevioletred;">Online</h1>
+                        <h2 id="btn1">Atul</h2>
+                        <h2 id="btn2">Annu</h2>
                     </div>
                 </div>
                 <div class="box status">
@@ -276,17 +270,51 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script>
-        let back = document.querySelector(".back");
-        let chatBox = document.querySelector(".chatBox");
-        let open = document.querySelector(".open");
+        // let back = document.querySelector(".back");
+        // let chatBox = document.querySelector(".chatBox");
+        // let open = document.querySelector(".open");
 
-        back.onclick = function () {
-            chatBox.classList.add("hide");
-        }
+        // back.onclick = function () {
+        //     chatBox.classList.add("hide");
+        // }
 
-        open.onclick = function () {
-            chatBox.classList.remove("hide");
+        // open.onclick = function () {
+        //     chatBox.classList.remove("hide");
+        // }
+
+        // private chat
+
+        let a = document.getElementById("btn1").innerText;
+        document.getElementById("btn1").addEventListener("click", (e) => {
+            e.preventDefault();
+            console.log(a)
+            window.location.href = `http://localhost:5500?q=${a}`
+        })
+        let b = document.getElementById("btn2").innerText;
+        document.getElementById("btn2").addEventListener("click", (e) => {
+            e.preventDefault();
+            console.log(b)
+            window.location.href = `http://localhost:5500?q=${b}`
+        })
+
+        // get name
+
+        let name = localStorage.getItem('name');
+        if (!name) {
+            const urlParams = new URLSearchParams(window.location.search)
+            localStorage.setItem("name", (urlParams.get('name')))
+            localStorage.setItem("token", (urlParams.get('token')))
         }
+        name = localStorage.getItem('name');
+
+        document.querySelector("#name").innerHTML = localStorage.getItem("name");
+        let logout = document.querySelector("#logout").addEventListener("click", () => {
+            localStorage.setItem("name", "");
+            localStorage.setItem("token", "");
+            window.location = "../../frontend/login.html"
+        })
+
+
 
     </script>
     <script src="./script/index.js"></script>

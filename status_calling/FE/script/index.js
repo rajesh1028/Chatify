@@ -25,9 +25,10 @@ function findUnseenStatus(out) {
             status_area.classList.add("hide");
             status_box.classList.remove("hide");
             //console.log(elem);
-            setTimeout(() => {
+            let timer = setTimeout(() => {
                 status_area.classList.remove("hide");
                 status_box.classList.add("hide");
+                clearTimeout(timer);
             }, 3000)
         })
     })

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,34 +8,36 @@
     <title>Chatify</title>
 </head>
 <link rel="stylesheet" href="./target.css">
+
 <body background="https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png">
     <nav>
         <img src="./public/Chatify (1).png" alt="">
-        <div >
+        <div>
             <button id="name">Name</button>
             <button>Logout</button>
         </div>
     </nav>
-    <a href="public/index.html"><button id="button">For group chat </button></a> 
+    <a href="public/index.html"><button id="button">For group chat </button></a>
     <div class="contact">
         <h1 style="color: palevioletred;">Online</h1>
         <h2 id="btn">Atul</h2>
         <h2 id="btn1">Annu</h2>
     </div>
 </body>
+
 </html>
 <script>
-    let a=document.getElementById("btn").innerText;
-    document.getElementById("btn").addEventListener("click",(e)=>{
-    e.preventDefault();
-    console.log(a)
-    window.location.href=`http://localhost:8080?q=${a}`
-})
-let b=document.getElementById("btn1").innerText;
-    document.getElementById("btn1").addEventListener("click",(e)=>{
-    e.preventDefault();
-    //console.log(a)
-    window.location.href=`http://localhost:8080?q=${b}`
-})
+    let a = document.getElementById("btn").innerText;
+    document.getElementById("btn").addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log(a)
+        window.location.href = `http://localhost:5500?q=${a}`
+    })
+    let b = document.getElementById("btn1").innerText;
+    document.getElementById("btn1").addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log(b)
+        window.location.href = `http://localhost:5500?q=${b}`
+    })
 
 </script>
