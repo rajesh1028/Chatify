@@ -13,7 +13,7 @@ const room = urlParams.get("room")
 console.log(username, room)
 
 
-const socket = io("http://localhost:8080/", { transports: ["websocket"] });
+const socket = io("http://localhost:5500/", { transports: ["websocket"] });
 
 socket.emit("joinRoom", { username, room });
 
