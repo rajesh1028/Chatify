@@ -10,7 +10,7 @@ form.addEventListener('submit',async(e)=>{
         body:JSON.stringify({name,email,password}),
         headers:{
             "Content-Type":"application/json"
-        }
+        }  //
     });
     res=await res.json();
     if(res.status){
