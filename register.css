@@ -35,10 +35,15 @@ a{
     color: #00a884;
 }
 
-#google{
+#google {
     display: flex;
+    justify-content: center;
 }
 
 #google img{
-    width: 40px;
+    background-color: white;
+    border-radius: 50%;
+    height: 20px;
+    margin-left: 10px;
+    padding: 1%;
 }
