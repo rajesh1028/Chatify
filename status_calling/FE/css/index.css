@@ -689,14 +689,15 @@ nav div{
     gap: 10px;
 }
 #button{
-    margin-left: 30%;
-    margin-top: 25px;
-    font-size: 25px;
+    position: absolute;
+    bottom: 100px;
+    right: 20px;
+    font-size: 20px;
     border: 3px solid white;
-    padding: 1% 5%;
+    padding: 1% 4% 1% 1%;
     background-color: #4ada80;
     color: white;
-    border-radius: 18px;
+    border-radius:50px 50px 50px 50px;
 }
 #button:hover{
     cursor: pointer;
@@ -709,4 +710,14 @@ nav div{
 
 .contact:hover{
     cursor: pointer;
+}
+
+.quickBtn a{
+    text-decoration: none;
+    color: unset;
+}
+
+.quickBtn a:visited{
+    text-decoration: none;
+    color: unset;
 }
