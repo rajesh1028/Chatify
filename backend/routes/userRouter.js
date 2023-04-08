@@ -40,6 +40,15 @@ userRouter.post('/login', async (ask, give) => {
     
 });
 
+userRouter.get("/",async(ask,give)=>{
+    try {
+        const names = await UserModel.distinct("name").lean().exec();
+        give.json(names);
+      } catch (err) {
+        give.send({Error:""});
+      }
+})
+
 module.exports = {
     userRouter
 }
