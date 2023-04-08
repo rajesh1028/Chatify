@@ -13,7 +13,7 @@ const room = urlParams.get("room")
 console.log(username, room)
 
 
-const socket = io("http://localhost:5500/", { transports: ["websocket"] });
+const socket = io("https://chatify-ippi.onrender.com/", { transports: ["websocket"] });
 
 socket.emit("joinRoom", { username, room });
 
@@ -94,8 +94,8 @@ document.getElementById("leave-btn").addEventListener("click",(e)=>{
     const leaveRoom = confirm("Are you sure you want to leave the chatRoom?");
  
     if(leaveRoom){
-        window.location.href = "./index.html";
-
+        // window.location.href = "./index.html";
+        window.location.href ="/status_calling/FE/index.html";
     }
 
 })
