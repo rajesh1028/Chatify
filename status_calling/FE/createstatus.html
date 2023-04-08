@@ -84,7 +84,7 @@
             <input type="text" placeholder="Enter name" id="name">
             <input type="text" placeholder="Image URL" id="image">
             <input type="text" placeholder="Enter description" id="description">
-            <input type="text" placeholder="Enter views" id="views">
+            <!-- <input type="text" placeholder="Enter views" id="views"> -->
         </div>
         <button id="create_status">Create</button>
     </div>
@@ -106,11 +106,11 @@
         let name = document.querySelector("#name").value;
         let image = document.querySelector("#image").value;
         let description = document.querySelector("#description").value;
-        let views = document.querySelector("#views").value;
+        let views =  Math.floor(Math.random() * (45 - 2) + 2);
         let obj = { name, image, description, views }
         //console.log(obj)
 
-        fetch("https://fierce-jay-coat.cyclic.app/status/add", {
+        fetch("https://red-determined-fossa.cyclic.app/status/add", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -119,11 +119,13 @@
         })
             .then((response) => response.json())
             .then((out) => {
-                console.log(out);
-                window.location.reload();
+                console.log(out); 
             })
-            .catch((err) => console.log(err));
-
+            .catch((err) => console.log(err))
+            .finally(()=>{
+                alert("Status Created")
+                window.location= "./index.html";
+            })
     }
 
 

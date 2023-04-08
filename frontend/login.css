@@ -9,9 +9,9 @@ body {
 }
 
 #login div {
-    padding: 2%;
+    padding: 40px;
     margin-top: 5%;
-    width: 20%;
+    min-width: 20vw;
     background-color: white;
     min-height: 60vh;
     border-radius: 10px;
@@ -31,7 +31,7 @@ button {
     border: 0px;
     padding: 4%;
     color: white;
-    font-size: x-large;
+    font-size: large;
 }
 
 button {
@@ -44,4 +44,13 @@ a {
 
 #google {
     display: flex;
+    justify-content: center;
+}
+
+#google img{
+    background-color: white;
+    border-radius: 50%;
+    height: 15px;
+    margin-left: 10px;
+    padding: 1%;
 }

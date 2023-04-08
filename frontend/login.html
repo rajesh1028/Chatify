@@ -15,13 +15,13 @@
     <div>
         <h1>Login</h1>
         <form id="form">
-            <input type="text" placeholder="Enter Your Email Address" id="email" required>
+            <input type="email" placeholder="Enter Your Email Address" id="email" minlength="4" required>
             <br>
-            <input type="password" placeholder="Enter Your Password" id="password" required>
+            <input type="password" placeholder="Enter Your Password" id="password" minlength="8" required>
             <br>
             <input type="submit" value="Continue">
         </form>
-            <button id="google" onclick="document.location='https://sore-rose-clownfish-garb.cyclic.app/auth/google'"> <img src="../assets/google.png" style="width: 40px;">Continue with Google</button>
+            <button id="google" onclick="document.location=`https://sore-rose-clownfish-garb.cyclic.app/auth/google`"> Continue with Google   <img src="../assets/glogo.png"></button>
         <h3>Dont't have account ? <a id="a" href=".././index.html">Register</a></h3>
     </div>
 </div>
