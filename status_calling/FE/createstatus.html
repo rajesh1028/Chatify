@@ -81,8 +81,7 @@
             <ion-icon id="status_close" name="close"></ion-icon>
         </div>
         <div class="data_area">
-            <input type="text" placeholder="Enter name" id="name">
-            <input type="text" placeholder="Image URL" id="image">
+            <input type="text" placeholder="Image URL" id="image" required>
             <input type="text" placeholder="Enter description" id="description">
             <!-- <input type="text" placeholder="Enter views" id="views"> -->
         </div>
@@ -103,9 +102,10 @@
     })
 
     function addStatus() {
-        let name = document.querySelector("#name").value;
+        let name = localStorage.getItem("name")
         let image = document.querySelector("#image").value;
-        let description = document.querySelector("#description").value;
+        if(image){
+            let description = document.querySelector("#description").value;
         let views =  Math.floor(Math.random() * (45 - 2) + 2);
         let obj = { name, image, description, views }
         //console.log(obj)
@@ -126,6 +126,10 @@
                 alert("Status Created")
                 window.location= "./index.html";
             })
+        }else{
+            alert("Image is required")
+        }
+        
     }
 
 
