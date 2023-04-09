@@ -162,9 +162,23 @@ header .action a {
     min-width: 45px;
     height: 45px;
     overflow: hidden;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.imgbx {
+    width: 45px;
+    height: 45px;
+    position: relative;
+    overflow: hidden;
     border-radius: 50%;
 }
-
+.imgBx img {
+  display: inline;
+  margin: 0 auto;
+  margin-left: -25%; 
+  height: 100%;
+  width: auto;
+}
 .chatlist .block .imgbx img {
     position: relative;
     top: 0;
