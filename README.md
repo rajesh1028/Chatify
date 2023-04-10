@@ -49,7 +49,7 @@ Group Chat
 
 ## Chat Page:
 - On the chat page, you can send and receive messages with the selected contact.
-- To exit the chat page, click on the "Back" button.
+- Please Note:- You may need to login two or more accounts, to check the chat Functionality.
 
 ## Group Chat Functionality:
 - To start group chat, click on the "Group Chat" button on the Home page.
@@ -68,24 +68,21 @@ Group Chat
 
 # HomePage
 
-![](assets/Homepage.jpeg)
+![](assets/HomepageF.PNG)
 
 # Register
 
-![](assets/Register.jpeg)
+![](assets/RegisterF.PNG)
 
 # Group Chat
 
-![](assets/Group%20Chat.jpeg)
+![](assets/Group%20ChatF.PNG)
 
 # Private Chat
 
-![](assets/Private%20Chat.jpeg)
+![](assets/Private%20ChatF.PNG)
 
 # Status
 
-![](assets/status.jpeg)
+![](assets/StatusF.PNG)
 
-# Call
-
-![](assets/Call.jpeg)
