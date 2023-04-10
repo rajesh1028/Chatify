@@ -4,10 +4,13 @@ const jwt = require("jsonwebtoken");
 const { UserModel } = require("../models/user.model");
 require("dotenv").config();
 
+// Created User Routes Here
 const userRouter = express.Router();
 
+// Response and Payload is done in Json Format
 userRouter.use(express.json())
 
+// User Register Route
 userRouter.post('/register', (ask, give) => {
     let { name, email, password } = ask.body;
     bcrypt.hash(password, 3, async (err, hashed) => {
@@ -21,6 +24,7 @@ userRouter.post('/register', (ask, give) => {
     })
 });
 
+// User Login Route
 userRouter.post('/login', async (ask, give) => {
     let { email, password } = ask.body;
     let user = await UserModel.findOne({ email });
@@ -40,6 +44,17 @@ userRouter.post('/login', async (ask, give) => {
     
 });
 
+// Contacts Route - Returns All Contacts
+userRouter.get("/",async(ask,give)=>{
+    try {
+        const names = await UserModel.distinct("name").lean().exec();
+        give.json(names);
+      } catch (err) {
+        give.send({Error:""});
+      }
+})
+
+// Exported the User Router
 module.exports = {
     userRouter
 }

@@ -1,6 +1,7 @@
 const jwt=require("jsonwebtoken");
 require("dotenv").config();
 
+// Middleware that authenticates Protected Route
 const authenticate=(ask,give,next)=>{
     let token=ask.headers.authorization;
     jwt.verify(token,process.env.secret,async (err,decoded)=>{

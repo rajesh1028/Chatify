@@ -51,7 +51,7 @@ function closeIcon() {
 let recent_updates = document.querySelector("#recent_updates");
 
 function statusData() {
-    fetch("https://red-determined-fossa.cyclic.app/status", {
+    fetch("https://powerful-pink-raincoat.cyclic.app/status", {
         method: "GET",
         headers: {
             "content-type": "application/json"
